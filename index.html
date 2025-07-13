@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>كنترول أويل للمقاولات الكهربائية</title>
+  <meta name="description" content="شركة كنترول أويل للمقاولات الكهربائية - كهرباء، سباكة، اتصالات، كاميرات، صيانة ومقاولات في أبوظبي.">
+
+  <!-- خط عربي -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background: #fff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff9900;
+    }
+
+    .hero {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1682345262055-8f95f3c513ea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      color: #ff9900;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .btn {
+      background: linear-gradient(45deg, #ff9900, #ffc107);
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+      gap: 1.5rem;
+      background: #f7f7f7;
+    }
+
+    .service {
+      flex: 1 1 200px;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #ff9900;
+      transition: transform 0.3s ease;
+    }
+
+    .service:hover i {
+      transform: scale(1.2);
+    }
+
+    .about, .clients {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .about h2, .clients h2 {
+      color: #ff9900;
+    }
+
+    .clients ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .clients li {
+      margin: 0.5rem 0;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 2rem;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #25D366;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+    }
+
+    @media(max-width: 768px) {
+      .services {
+        flex-direction: column;
+      }
+
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+    .service-link {
+  display: block;
+  text-decoration: none;
+  color: inherit; /* عشان الألوان ماتتغيرش */
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Header -->
+  <header>
+    <img src="images/logo.png" alt="كنترول أويل">
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="#services">الخدمات</a>
+      <a href="contact.html">اتصل بنا</a>
+    </nav>
+  </header>
+
+  <!-- ✅ Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>كنترول أويل للمقاولات الكهربائية</h1>
+      <p>حلول كهرباء وسباكة واتصالات وكاميرات وصيانة ومقاولات عامة في أبوظبي</p>
+      <a class="btn" href="https://wa.me/971503085005">تواصل واتساب</a>
+    </div>
+  </section>
+
+  <!-- ✅ Services -->
+<section class="services" id="services">
+  <a href="/electrical.html" class="service-link">
+    <div class="service">
+      <i class="fas fa-bolt"></i>
+      <h3>الكهرباء</h3>
+      <p>أعمال كهرباء متكاملة للمنازل والفلل.</p>
+    </div>
+  </a>
+  <a href="/plumbing.html" class="service-link">
+    <div class="service">
+      <i class="fas fa-faucet"></i>
+      <h3>السباكة</h3>
+      <p>حلول سباكة وصيانة وتسليك احترافي.</p>
+    </div>
+  </a>
+  <a href="/networks.html" class="service-link">
+    <div class="service">
+      <i class="fas fa-network-wired"></i>
+      <h3>الاتصالات</h3>
+      <p>تمديد شبكات واتصالات حديثة.</p>
+    </div>
+  </a>
+  <a href="/cctv.html" class="service-link">
+    <div class="service">
+      <i class="fas fa-video"></i>
+      <h3>كاميرات المراقبة</h3>
+      <p>تركيب وصيانة كاميرات بجودة عالية.</p>
+    </div>
+  </a>
+  <a href="/speakers.html" class="service-link">
+    <div class="service">
+      <i class="fas fa-volume-up"></i>
+      <h3>السماعات</h3>
+      <p>أنظمة صوت وسماعات داخلية.</p>
+    </div>
+  </a>
+  <a href="/maintenance.html" class="service-link">
+    <div class="service">
+      <i class="fas fa-tools"></i>
+      <h3>الصيانة</h3>
+      <p>خدمات صيانة شاملة 24/7.</p>
+    </div>
+  </a>
+  <a href="/contracting.html" class="service-link">
+    <div class="service">
+      <i class="fas fa-hard-hat"></i>
+      <h3>مقاولات عامة</h3>
+      <p>مقاولات متكاملة للأعمال الكهربائية والسباكة.</p>
+    </div>
+  </a>
+</section>
+
+
+  <!-- ✅ About -->
+  <section class="about">
+    <h2>عن كنترول أويل</h2>
+    <p>شركة كنترول أويل للمقاولات الكهربائية ذ.م.م متخصصة في أعمال الكهرباء، السباكة، الاتصالات، الكاميرات، السماعات والمقاولات العامة. نفخر بخبراتنا مع عملاء كبار مثل الكلية التقنية ودي المامول في أبوظبي، ونلتزم بالجودة والسرعة وخدمة العملاء بأعلى مستوى.</p>
+  </section>
+
+  <!-- ✅ Clients -->
+  <section class="clients">
+    <h2>عملاؤنا</h2>
+    <ul>
+      <li>الكلية التقنية – أبوظبي</li>
+      <li>دي المامول – أبوظبي</li>
+    </ul>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <p>&copy; 2025 كنترول أويل للمقاولات الكهربائية ذ.م.م</p>
+    <p>رقم التواصل: +971503085005 | <a href="https://wa.me/971503085005">تواصل واتساب</a></p>
+    <p>
+      <a href="index.html">الرئيسية</a> |
+      <a href="#services">الخدمات</a> |
+      <a href="contact.html">اتصل بنا</a>
+    </p>
+  </footer>
+
+  <!-- ✅ WhatsApp Floating Button -->
+  <a href="https://wa.me/971503085005" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i> واتساب
+  </a>
+
+</body>
+</html>
